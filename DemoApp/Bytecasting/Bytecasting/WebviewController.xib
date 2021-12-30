@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewController" customModule="ClientApp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="xZq-jt-fcL" id="9nv-Pa-kQP"/>
+                <outlet property="vw_webView" destination="cDx-k4-sSg" id="zKm-ym-LNn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xZq-jt-fcL">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDx-k4-sSg">
+                    <rect key="frame" x="0.0" y="44" width="414" height="786"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oaf-aa-YdE">
+                    <rect key="frame" x="0.0" y="830" width="414" height="66"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Qrw-YH-GVI">
+                            <rect key="frame" x="10" y="22" width="394" height="22"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFP-iB-QDF">
+                                    <rect key="frame" x="0.0" y="0.0" width="98.5" height="22"/>
+                                    <state key="normal" image="arrow.left" catalog="system"/>
+                                    <connections>
+                                        <action selector="backwardAction:" destination="-1" eventType="touchUpInside" id="U3H-he-jrB"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlv-bk-c62">
+                                    <rect key="frame" x="98.5" y="0.0" width="98.5" height="22"/>
+                                    <state key="normal" image="arrow.right" catalog="system"/>
+                                    <connections>
+                                        <action selector="forwardAction:" destination="-1" eventType="touchUpInside" id="Dan-hr-Jf8"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bh-0Q-rAI">
+                                    <rect key="frame" x="197" y="0.0" width="98.5" height="22"/>
+                                    <state key="normal" image="arrow.counterclockwise" catalog="system"/>
+                                    <connections>
+                                        <action selector="reloadAction:" destination="-1" eventType="touchUpInside" id="hPp-Cn-dRW"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbo-WL-qhf">
+                                    <rect key="frame" x="295.5" y="0.0" width="98.5" height="22"/>
+                                    <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Qrw-YH-GVI" firstAttribute="centerX" secondItem="Oaf-aa-YdE" secondAttribute="centerX" id="1qw-zR-vW5"/>
+                        <constraint firstItem="Qrw-YH-GVI" firstAttribute="leading" secondItem="Oaf-aa-YdE" secondAttribute="leading" constant="10" id="HpY-Qa-6VN"/>
+                        <constraint firstAttribute="height" constant="66" id="Mdc-DH-gbC"/>
+                        <constraint firstItem="Qrw-YH-GVI" firstAttribute="centerY" secondItem="Oaf-aa-YdE" secondAttribute="centerY" id="ThD-DH-pqA"/>
+                        <constraint firstAttribute="trailing" secondItem="Qrw-YH-GVI" secondAttribute="trailing" constant="10" id="Ttr-OJ-wg9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="NxX-H3-u0Q"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="cDx-k4-sSg" firstAttribute="top" secondItem="NxX-H3-u0Q" secondAttribute="top" id="3Ps-Kh-jlc"/>
+                <constraint firstItem="Oaf-aa-YdE" firstAttribute="trailing" secondItem="NxX-H3-u0Q" secondAttribute="trailing" id="BGv-1C-4r2"/>
+                <constraint firstItem="Oaf-aa-YdE" firstAttribute="leading" secondItem="NxX-H3-u0Q" secondAttribute="leading" id="HiI-FC-Ezp"/>
+                <constraint firstItem="cDx-k4-sSg" firstAttribute="trailing" secondItem="NxX-H3-u0Q" secondAttribute="trailing" id="WKe-9n-VEt"/>
+                <constraint firstAttribute="bottom" secondItem="Oaf-aa-YdE" secondAttribute="bottom" id="aQR-WC-Fn1"/>
+                <constraint firstItem="Oaf-aa-YdE" firstAttribute="top" secondItem="cDx-k4-sSg" secondAttribute="bottom" id="b2s-fM-EIQ"/>
+                <constraint firstItem="cDx-k4-sSg" firstAttribute="leading" secondItem="NxX-H3-u0Q" secondAttribute="leading" id="ned-Uq-w9Q"/>
+            </constraints>
+            <point key="canvasLocation" x="165" y="-548"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.counterclockwise" catalog="system" width="115" height="128"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
